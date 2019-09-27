@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE"/>
+        <meta charset="UTF-8">
+        <title>ChatBot</title>
+        <link href="../static/style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.min.js"></script>
+        <script src="https:////cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"></script>
+        {% csrf_token %}
+    </head>
+    
+    <body>
+        <div class="chat">
+            <div class="chat-header clearfix">
+            <img src="https://cbmtraining.co.za/wp-content/uploads/2017/07/LiveChat-Avatar.png" alt="avatar" style="height:50px"/>
+            <div class="chat-about">
+                <div class="chat-with">Chat with Candice</div>
+            </div>
+            <i class="fa fa-star"></i>
+            </div> <!-- end chat-header -->
+            
+            <div class="chat-history">
+            <ul>
+               
+            </ul>
+            
+            </div> <!-- end chat-history -->
+            
+            <div class="chat-message clearfix">
+            <textarea name="message-to-send" id="message-to-send" placeholder ="Type your message" rows="3"></textarea>
+                    
+            <i class="fa fa-file-o"></i> &nbsp;&nbsp;&nbsp;
+            <i class="fa fa-file-image-o"></i>
+            
+            <button>Send</button>
+    
+            </div> <!-- end of chat-message -->
+            
+        </div> <!-- end of chat -->
+        
+        <script src="../static/animation.js"></script>      
+  
+    <script id="message-template" type="text/x-handlebars-template">
+        <!-- -django model has conflict with handlebars-->
+    </script>
+    
+    <script id="message-response-template" type="text/x-handlebars-template">
+       
+    </script>
+    </body>
+
+</html>
+  
