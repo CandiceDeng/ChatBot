@@ -9,3 +9,13 @@ class User(models.Model):
 
     class Meta:  
         db_table = "user"
+
+
+class Question(models.Model):
+    userId = models.ForeignKey(User, on_delete=models.CASCADE)
+    content = models.CharField(max_length=10000)
+
+
+class Answer(models.Model):
+    questionId = models.ForeignKey(Question, on_delete=models.CASCADE)
+    content = models.CharField(max_length=10000)

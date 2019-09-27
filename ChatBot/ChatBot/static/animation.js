@@ -56,7 +56,7 @@ $(function(){
           this.$textarea.val('');
           $.ajax({
             method: 'post',
-            url: '/chat',
+            url: '/api/chatterbot',
             data: {
               csrfmiddlewaretoken: $('[name="csrfmiddlewaretoken"]').val(),
               userInput: this.messageToSend.trim()
@@ -66,7 +66,7 @@ $(function(){
             // responses
                
             var contextResponse = { 
-              response: data,
+              response: data.text,
               time: this.getCurrentTime()
             };
             this.$chatHistoryList.append(templateResponse(contextResponse));

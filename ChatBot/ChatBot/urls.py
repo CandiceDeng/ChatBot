@@ -23,6 +23,7 @@ from . import response
 
 
 
+
 def chat(request):
     userInput = request.POST['userInput']
     return HttpResponse(response.GetResponse(userInput[0]))
@@ -30,6 +31,7 @@ def chat(request):
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls, name='admin'),
-    url(r'^$', view.ChatBot.as_view()),
-    path('chat', chat, name='chat'),
+    url(r'^$', view.ChatBotView.as_view()),
+     url(r'^api/chatterbot', view.ChatterBotApiView.as_view(), name='chatterbot'),
+    # path('chat', chat, name='chat'),
 ]
